@@ -94,7 +94,23 @@ console.log(convertCelciusToFahrenheit(45));
 // Normal weight: BMI is 18.5 to 24.9
 // Overweight: BMI is 25 to 29.9
 // Obese: BMI is 30 or more
-// Write a function called checkSeason, it takes a month parameter and returns the season:Autumn, Winter, Spring or Summer.
+
+function calcBmi(weight, height) {
+  bmi = weight / height ** 2;
+  return (bmi < 18.5 ? "Underweight" : bmi >= 18.5 && bmi <= 24.9 ? "Normal" : bmi >= 25 && bmi <= 19.9 ? "Overweight" : bmi > 30 ? "Obese" : "Error");
+  
+}
+ 
+console.log(calcBmi(60, 1.7));
+
+//Write a function called checkSeason, it takes a month parameter and returns the season:Autumn, Winter, Spring or Summer.
+
+const checkSeason = (month) => {
+return(month === "December" || month === "January" || month === "February" ? "Winter" : month === "March" || month === "April" || month === "May" ? "Spring" : month === "June" || month === "July" || month === "August" ? "Summer" : month === "September" || month === "October" || month === "November" ? "Autumn" : "Error");
+
+}
+console.log(checkSeason("January"));
+
 
 
 // Math.max returns its largest argument. Write a function findMax that takes three arguments and returns their maximum with out using Math.max method.
@@ -129,5 +145,4 @@ function mean(value) {
 
   return average;
 }
-
 console.log(mean(100))
