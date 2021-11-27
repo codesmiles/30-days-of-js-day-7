@@ -91,6 +91,14 @@ const capitalizeArray = (array) => {
 }
 console.log(capitalizeArray(['aAETwhATHdat', 'bETtateqETR', 'aAFSDGERc']))
 // Declare a function name addItem. It takes an item parameter and it returns an array after adding the item
+function addItem() {
+    let newArr = [];
+    for (let i = 0; i < arguments.length; i++) {
+        newArr.push(arguments[i]);
+    }
+    return newArr;
+}
+console.log(addItem(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
 
 // Declare a function name removeItem. It takes an index parameter and it returns an array after removing an item
 
