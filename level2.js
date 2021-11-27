@@ -101,18 +101,61 @@ function addItem() {
 console.log(addItem(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
 
 // Declare a function name removeItem. It takes an index parameter and it returns an array after removing an item
+function removeItem(...index) {
+  const newArr = [];
+  newArr.push(...index);
+  newArr.pop();
+ 
+  return newArr;
+}
+console.log(removeItem(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))  
 
 // Declare a function name sumOfNumbers. It takes a number parameter and it adds all the numbers in that range.
 
+const sumOfNumbers = (number) => {
+    let sum = 0;
+    for (let i = 0; i <= number; i++) {
+        sum += i;
+    }
+    return sum;
+}
+
+console.log(sumOfNumbers(10));
+
 // Declare a function name sumOfOdds. It takes a number parameter and it adds all the odd numbers in that - range.
+const sumOfOdds = (number) => {
+  let sum = 0;
+  for (let i = 0; i <= number; i++) {
+    if (i % 2 !== 0) {
+      sum += i;
+    }
+  }
+
+  return sum;
+}
+console.log(sumOfOdds(10));
 
 // Declare a function name sumOfEven. It takes a number parameter and it adds all the even numbers in that - range.
+
+const sumOfEven = (number) => {
+  let sum = 0;
+  for (let i = 0; i <= number; i++) {
+    if (i % 2 === 0) {
+      sum += i;
+    }
+  }
+
+  return sum;
+};
+console.log(sumOfEven(10));
 
 // Declare a function name evensAndOdds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
 
 // evensAndOdds(100);
 // The number of odds are 50.
 // The number of evens are 51.
+
+
 // Write a function which takes any number of arguments and return the sum of the arguments
 
 // sum(1, 2, 3) // -> 6
