@@ -149,26 +149,80 @@ const sumOfEven = (number) => {
 };
 console.log(sumOfEven(10));
 
+
 // Declare a function name evensAndOdds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
 
-// evensAndOdds(100);
+function evensAndOdds(number) {
+  let even = 0;
+  let odd = 0;
+  if (number < 0) {
+    return 'Invalid Input';
+  }
+  else {
+
+  for (i = 0; i <= number; i++) {
+    if (i % 2 === 0) {
+      even++;
+    } else if (i % 2 !== 0) {
+      odd++;
+    }
+  }  
+  }
+  
+  console.log(`The number of Evens are ${even} \n the number of Odds are ${odd}`);
+}
+evensAndOdds(100);
 // The number of odds are 50.
 // The number of evens are 51.
 
 
 // Write a function which takes any number of arguments and return the sum of the arguments
-
-// sum(1, 2, 3) // -> 6
+function sumOfArguments(...args) {
+  let sum = 0;
+  for (let i = 0; i < args.length; i++) {
+    sum += args[i];
+  }
+  console.log(sum);
+}
+sumOfArguments(1, 2, 3) // -> 6
 // sum(1, 2, 3, 4) // -> 10
-// Writ a function which generates a randomUserIp.
+// Write a function which generates a randomUserIp.
+const randomUserIp = () => {
+  let ip = [];
+  for (let i = 0; i <=3; i++) {
+    ip.push(Math.floor(Math.random() * 255));
+  }
+  return ip.join('.');
+}
+console.log(randomUserIp());
 
 // Write a function which generates a randomMacAddress
+const randomMacAddress = () => {
+  let mac = [];
+  for (let i = 0; i <= 5; i++) {
+    mac.push(Math.floor(Math.random() * 255));
+  }
+  return mac.join(':');
+}
+console.log(randomMacAddress());
 
 // Declare a function name randomHexaNumberGenerator. When this function is called it generates a random hexadecimal number. The function return the hexadecimal number.
+const randomHex = () =>
+  `#${Math.floor(Math.random() * 0xffffff)
+    .toString(16)
+    .padEnd(6, "0")}`;
+
+console.log(randomHex());
 
 // console.log(randomHexaNumberGenerator());
 // '#ee33df'
 // Declare a function name userIdGenerator. When this function is called it generates seven character id. The function return the id.
+// const userIdGenerator = () => 
+// `#${Math.floor(Math.random() * 0xffffff)
+//   .toString(16)
+//   .padEnd(6, "0")}`;
+
+// console.log(userIdGenerator());
 
 // console.log(userIdGenerator());
 // 41XTDbE
