@@ -207,12 +207,12 @@ const randomMacAddress = () => {
 console.log(randomMacAddress());
 
 // Declare a function name randomHexaNumberGenerator. When this function is called it generates a random hexadecimal number. The function return the hexadecimal number.
-const randomHex = () =>
+/*const randomHex = () =>
   `#${Math.floor(Math.random() * 0xffffff)
     .toString(16)
     .padEnd(6, "0")}`;
 
-console.log(randomHex());
+console.log(randomHex());*/
 
 // console.log(randomHexaNumberGenerator());
 // '#ee33df'
