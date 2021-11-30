@@ -215,26 +215,38 @@ console.log(randomMacAddress());
 console.log(randomHex());*/
 
 
+// const randomHexaNumberGenerator = () => {
+//   const hexa = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
+
+//   let hexaNumber = '';
+//   for (let i = 0; i < 6; i++) {
+//   // console.log(hexa[Math.floor(Math.random() * hexa.length)]); well i got to better understand this shit
+//     hexaNumber += hexa[Math.floor(Math.random() * hexa.length)];
+//   }
+// return hexaNumber;
+// }
+// console.log(randomHexaNumberGenerator());
+
 const randomHexaNumberGenerator = () => {
   const hexa = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
-
-  let hexaNumber = '';
-  for (let i = 0; i < 6; i++) {
-  // console.log(hexa[Math.floor(Math.random() * hexa.length)]); well i got to better understand this shit
-    hexaNumber += hexa[Math.floor(Math.random() * hexa.length)];
+  let hexaNumber = [];
+  for (i = 0; i < 6; i++) {
+    hexaNumber.push(hexa[Math.floor(Math.random() * hexa.length)]);
   }
-return hexaNumber;
+   return `#${hexaNumber.join('')}`;
 }
+
 console.log(randomHexaNumberGenerator());
-
-
-// console.log(randomHexaNumberGenerator());
 // '#ee33df'
 // Declare a function name userIdGenerator. When this function is called it generates seven character id. The function return the id.
-// const userIdGenerator = () => 
+
+// const userIdGenerator = () =>
 // `#${Math.floor(Math.random() * 0xffffff)
 //   .toString(16)
 //   .padEnd(6, "0")}`;
+
+
+
 
 // console.log(userIdGenerator());
 

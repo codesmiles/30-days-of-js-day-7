@@ -15,10 +15,24 @@
 // dIV0SSUTgAdKwStr
 // '
 // Write a function name rgbColorGenerator and it generates rgb colors.
+const rgbColorGenerator = () => {
+    let r = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+    console.log(`rgb(${r}, ${g}, ${b})`);
+}
 
-// rgbColorGenerator()
+rgbColorGenerator()
 // rgb(125,244,255)
 // Write a function arrayOfHexaColors which return any number of hexadecimal colors in an array.
+const arrayOfHexaColors = (number) => {
+    let colors = [];
+    for (let i = 0; i < number; i++) {
+        colors.push(Math.floor(Math.random() * 16777215).toString(16));
+    }
+    return colors;
+}
+console.log(arrayOfHexaColors(2));
 
 // Write a function arrayOfRgbColors which return any number of RGB colors in an array.
 
