@@ -229,7 +229,7 @@ const randomHexaNumberGenerator = () => {
   return `#${hexaNumber.join("")}`;
 };
 
-console.log(randomHexaNumberGenerator());
+console.log(`hexcolors:`,randomHexaNumberGenerator());
 // '#ee33df'
 // Declare a function name userIdGenerator. When this function is called it generates seven character id. The function return the id.
 
