@@ -24,39 +24,21 @@ const rgbColorGenerator = () => {
 
 rgbColorGenerator();
 // rgb(125,244,255)
+
 // Write a function arrayOfHexaColors which return any number of hexadecimal colors in an array.
-// const arrayOfHexaColors = (number) => {
-//     let colors = [];
-//     for (let i = 0; i < number; i++) {
-//         colors.push(Math.floor(Math.random() * 16777215).toString(16));
-//     }
-//     return colors;
-// }
 
-function arrayOfHexColors(n) {
-  let num = Number(n);
-  const newColor = [];
-  const hexColors = [];
-  // const hex = [1, 2, 3, 4, 5, 6, 7, 8, 9, `a`, `b`, `c`, `d`, `e`, `f`];
-  for (i = 0; i < num; i++) {
-    for (j = 0; j < 6; j++) {
-      return newColor.push(hex[Math.floor(Math.random() * 16).toString(16)]);
+const arrayOfHexaColors = (number) => {
+    let colors = [];
+    for (let i = 0; i < number; i++) {
+        colors.push(Math.floor(Math.random() * 16777215).toString(16));
     }
-    // gencolor = newColor.join("");
-    return hexColor.push(newColor);
-  }
-  return hexColors;
+    return colors;
 }
-console.log(`array of colors`, arrayOfHexColors(6));
 
 
-  for (i = 0; i < 3; i++){
-    
-    for (j = 0; j < i; j++){
-      return j
-    }
-    return i
-}console.log(`generate for loops`)
+console.log(`array of colors`, arrayOfHexaColors(3));
+
+
 
 // Write a function arrayOfRgbColors which return any number of RGB colors in an array.
 
