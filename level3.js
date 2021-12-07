@@ -41,6 +41,17 @@ console.log(`array of colors`, arrayOfHexaColors(3));
 
 
 // Write a function arrayOfRgbColors which return any number of RGB colors in an array.
+const arrayOfRgbColors = (number) => {
+  let colors = [];
+  for (let i = 0; i < number; i++) {
+     let r = Math.floor(Math.random() * 256);
+     let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+    colors.push(`rgb(${r}, ${g}, ${b})`);
+  }
+  return colors;
+}
+console.log(`array of RGB colors`, arrayOfRgbColors(3));
 
 // Write a function convertHexaToRgb which converts hexa color to rgb and it returns an rgb color.
 
