@@ -54,15 +54,55 @@ const arrayOfRgbColors = (number) => {
 console.log(`array of RGB colors`, arrayOfRgbColors(3));
 
 // Write a function convertHexaToRgb which converts hexa color to rgb and it returns an rgb color.
+function convertHexaToRgb(hexaColor) {
+  let r = parseInt(hexaColor.substring(1, 3), 16);
+  let g = parseInt(hexaColor.substring(3, 5), 16);
+  let b = parseInt(hexaColor.substring(5, 7), 16);
+  return `rgb(${r}, ${g}, ${b})`;
+}
+console.log(`converting HEX to RGB`,convertHexaToRgb('a42d4f'))
+
 
 // Write a function convertRgbToHexa which converts rgb to hexa color and it returns an hexa color.
+const convertRgbToHex = (rgbColor) => {
+  let newArray = rgbColor.split(',');
+//   newArray.map(element => {
+//  parseInt(element, 16);
+//   });
+
+  newArray = newArray.map(element => {
+    return parseInt(element, 10).toString(16);
+  })
+  return newArray.join('');
+}
+console.log(`converting RGB to HEX`,convertRgbToHex('125,244,255'));
 
 // Write a function generateColors which can generate any number of hexa or rgb colors.
 
-// console.log(generateColors('hexa', 3)) // ['#a3e12f', '#03ed55', '#eb3d2b']
-// console.log(generateColors('hexa', 1)) // '#b334ef'
-// console.log(generateColors('rgb', 3)) // ['rgb(5, 55, 175)', 'rgb(50, 105, 100)', 'rgb(15, 26, 80)']
-// console.log(generateColors('rgb', 1)) // 'rgb(33,79, 176)'
+const generateColors = (type, number) => {
+  switch (type) {
+    case `hexa` : 
+      arrayOfHexaColors(number)
+      break;
+    
+    case `rgb` :
+      arrayOfRgbColors(number)
+      break;
+    default:
+     'Please enter valid type'; 
+      break;
+  }
+  // type ===  || type === || type === || type === `HEXA` ? 
+  //   : type ===  || type === `RGB` ? 
+  //   : ;
+}
+console.log(`generate colors`, generateColors('hexa', 5));
+
+console.log(generateColors('hexa', 3)) // ['#a3e12f', '#03ed55', '#eb3d2b']
+console.log(generateColors('hexa', 1)) // '#b334ef'
+console.log(generateColors('rgb', 3)) // ['rgb(5, 55, 175)', 'rgb(50, 105, 100)', 'rgb(15, 26, 80)']
+console.log(generateColors('rgb', 1)) // 'rgb(33,79, 176)'
+
 // Call your function shuffleArray, it takes an array as a parameter and it returns a shuffled array
 
 // Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number
