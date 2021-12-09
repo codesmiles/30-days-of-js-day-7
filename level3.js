@@ -238,10 +238,17 @@ console.log(isPrime(4));
 // JavaScript variable name does not support special characters or symbols except $ or _. Write a function isValidVariable which check if a variable is valid or invalid variable.
 
 // Write a function which returns array of seven random numbers in a range of 0-9. All the numbers must be unique.
-
 // sevenRandomNumbers()
 // [(1, 4, 5, 7, 9, 8, 0)]
+
+
 // Write a function called reverseCountries, it takes countries array and first it copy the array and returns the reverse of the original array
+function reverseCountries(countries) {
+  const countriesCopy = countries;
+  
+  return `The reverse of ${countries} is ${countries.reverse()}`;
+}
+console.log(reverseCountries([`Nigeria`,`Congo`,`ZImbabwe`,`Zambia`]))
 
 // Create a function called getPersonInfo. The getPersonInfo function takes an object parameter. The structure of the object and the output of the function is given below. Try to use both a regular way and destructuring and compare the cleanness of the code. If you want to compare your solution with my solution, check this link.
 const person = {
