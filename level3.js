@@ -314,21 +314,22 @@ const produceRandPhoneNumber = () => {
     phoneNumber.push(prefixNum[randNum] + Math.floor(Math.random() * 9999999));
   }
 
-  // Look into this later
-
-  // for (let i = 0; i < 10; i++) {
-
-  //   for (i = 0; i < 1; i++) {
-  //     let randNum = Math.floor(Math.random() * prefixNum.length);
-  //     phoneNumber.push(prefixNum[randNum]);
-  //     for (let j = 0; j < 8; j++) {
-  //       phoneNumber.push(Math.floor(Math.random() * 10));
-  //     }
-  //     }
-
-  //     numberArr.push(phoneNumber);
-  //   }
-
   return phoneNumber.join(", ");
 };
 console.log(produceRandPhoneNumber());
+
+const quadraticEquation = (a, b, c) => {
+  let x1, x2;
+  let deviant = Math.sqrt(Math.pow(b, 2) - 4 * a * c);
+  if (deviant > 0) {
+    x1 = (-b + deviant) / (2 * a);
+    x2 = (-b - deviant) / (2 * a);
+    return `x1 = ${x1}, x2 = ${x2}`;
+  } else if (deviant === 0) {
+    x1 = -b / (2 * a);
+    return `x1 = ${x1}`;
+  } else {
+    return `No real roots`;
+  }
+};
+console.log(quadraticEquation(3, 6, 3));
