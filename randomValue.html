@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <p style="color: purple; text-align: center;margin-top: 20%;">
+        Please enter the text showned in the imag first and then click "continue Download button"
+    </p>
+
+    <form action="" method="get" style="text-align: center;">
+        <p class="text" style="display: inline-block; padding: 2em 5em; background-color:#c1c1c1;">this is a dummy word</p>
+        <p class="text2" ></p>
+        <input type="text" name="captcha" id="captcha" />
+        <input type="submit" value="Continue Download" style="display:block; margin: 2em auto 0;"/>
+    </form>
+
+    <script>
+        const form = document.querySelector('form');
+        const text = document.querySelector('.text');
+        const inputCap = document.querySelector('#captcha');
+        const text2 = document.querySelector('.text2');
+
+        text.addEventListener('click', () => {
+            let alphabet = "abcdefghijklmnopqrstuvwxyz";
+            let upperAlphabet = alphabet.toUpperCase();
+            let numbers = "0123456789";
+            let numberAndAlphabet = alphabet + upperAlphabet + numbers;
+            numberAndAlphabet = numberAndAlphabet.split("");
+
+            userId = [];
+            for (i = 0; i < 7; i++) {
+                userId.push(numberAndAlphabet[Math.floor(Math.random() * numberAndAlphabet.length)]);
+            }
+            return text.innerHTML = userId.join("");
+        });
+
+        // text.addEventListener('click',()=> {
+        //    return text.innerText = 'show something';
+        // })
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const captcha = inputCap.value;
+            if (captcha === text.innerHTML) {
+                text2.innerHTML = '<h1>You are welcome</h1>';
+            } else {
+                text2.innerHTML = '<h1>You are not welcome</h1>';
+            }
+        });
+    </script>
+</body>
+
+</html>
